@@ -7,28 +7,8 @@ Hàm khai báo trong Class thì gọi là phương thức(method) hoặc hàm th
 
 Access Specifier: Khác với Struct trong C, thì trong class phải khai báo thêm Acess Speifier (Phạm vi truy cập)
 •  public: Thành viên có thể truy cập từ bên ngoài class. 
-•  private: Chỉ truy cập được bên trong class, để ẩn dữ liệu, muốn truy cập phải thông qua các hàm thành viên setter, getter, đươc khai báo trong public. Nhờ việc này có thể gài thêm các hàm kiểm tra dữ liệu.
+•  private: Chỉ truy cập được bên trong class, để ẩn dữ liệu
 •  protected: Dùng trong kế thừa, truy cập được trong class và các class con. Thành viên bên ngoài 2 class thì không truy cập được
-
-Class trong C++ khác với struct, union 1 điểm quan trọng nữa là nó có các hàm khởi tạo giá trị ban đầu cho dữ liệu thành viên (data member) khi bật máy hay khởi động và xóa dữ liệu thành viên khi thoát khỏi chương trình. Cái này được thực hiện thông qua hàm đặc biệt là Contructor (tên trùng tên class) và Destructor (trùng tên class nhưng có dấu ~ đằng trước)
-Constructor (tên trùng tên class):
-Để gán giá trị ban đầu cho các data member có nhiều cách. Nhưng dung danh sách khởi tạo, đây là cách ngắn gọn nhất, cách còn lại xem trong code còn lại xem trong phần code.
-Danh sách khởi tạo là một phần của constructor trong C++, được sử dụng để khởi tạo các thành viên dữ liệu (data members) hoặc các lớp cơ sở (base classes) của một lớp ngay trước khi thân hàm constructor được thực thi. Nó nằm giữa dấu : và thân hàm {} của constructor
-private:
-        double realPart;    // phần thực
-        double imagPart;    // phần ảo
-   
-    public:
-        Complex(double real = 0, double imag = 0): realPart(real), imagPart(imag){}
-
-Danh sách khởi tạo
-: realPart(real), imagPart(imag): Đây là danh sách khởi tạo, nằm sau dấu : và trước thân hàm {}.
-
-realPart(real): Khởi tạo thành viên dữ liệu realPart của lớp Complex bằng giá trị của tham số real.
-imagPart(imag): Khởi tạo thành viên dữ liệu imagPart của lớp Complex bằng giá trị của tham số imag.
-
-Danh sách khởi tạo đảm bảo rằng các thành viên realPart và imagPart được gán giá trị ngay khi đối tượng được tạo, trước khi bất kỳ mã nào trong thân constructor được thực thi. 
-Hiệu suất:  Khởi tạo trực tiếp các thành viên dữ liệu trong danh sách khởi tạo thường hiệu quả hơn so với gán giá trị trong thân constructor. Nếu gán giá trị trong thân hàm, các thành viên có thể được khởi tạo mặc định trước, sau đó mới được gán lại giá trị, gây lãng phí tài nguyên 
 
 ```cpp
 /**
