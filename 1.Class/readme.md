@@ -30,7 +30,7 @@ imagPart(imag): Khởi tạo thành viên dữ liệu imagPart của lớp Compl
 Danh sách khởi tạo đảm bảo rằng các thành viên realPart và imagPart được gán giá trị ngay khi đối tượng được tạo, trước khi bất kỳ mã nào trong thân constructor được thực thi. 
 Hiệu suất:  Khởi tạo trực tiếp các thành viên dữ liệu trong danh sách khởi tạo thường hiệu quả hơn so với gán giá trị trong thân constructor. Nếu gán giá trị trong thân hàm, các thành viên có thể được khởi tạo mặc định trước, sau đó mới được gán lại giá trị, gây lãng phí tài nguyên 
 
-...cpp
+```cpp
 /**
  * @brief:
  * @param:
@@ -167,4 +167,4 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-...
+```
