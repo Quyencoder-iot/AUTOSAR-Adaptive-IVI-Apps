@@ -11,7 +11,6 @@ Access Specifier: Khác với Struct trong C, thì trong class phải khai báo 
 •  protected: Dùng trong kế thừa, truy cập được trong class và các class con. Thành viên bên ngoài 2 class thì không truy cập được
 
 
-
 ```cpp
 /**
  * @brief:
@@ -68,11 +67,10 @@ class SinhVien
         //Tạo hàm Destructor()
         ~SinhVien();
         // static property
-        static int count;    //0x20-0x23,static sẽ cấp pháp riêng vùng nhớ tĩnh, các đối tương sv1, sv2 khi truy cập đến biến cout, đều phải sử dụng chung vùng nhớ này  
+        static int count;    
         // static method
         static int getcount()
         {
-            // ID=100; // trong 1 hàm static method không thể sử dụng 1 biến thông thường, bắt buộc phải sử dụng 1 biến static, không sẽ báo lỗi
             return count;
         }
         ;
@@ -146,3 +144,4 @@ int main(int argc, char const *argv[])
 }
 
 ```
+git 
